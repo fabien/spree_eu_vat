@@ -2,9 +2,8 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_eu_vat'
-  s.version     = '0.70.3'
-  s.summary     = 'Add gem summary here'
-  s.description = 'Add (optional) gem description here'
+  s.version     = '0.70.0'
+  s.summary     = 'Attempt to conceptually fix the EU VAT system'
   s.required_ruby_version = '>= 1.8.7'
 
   # s.author            = 'David Heinemeier Hansson'

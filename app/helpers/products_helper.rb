@@ -8,8 +8,7 @@ module ProductsHelper
     amount = product_or_variant.price
     
     # prices are considered to be VAT inclusive already, show price excluding VAT if applicable
-    if options.delete(:show_vat_excluded) === true && Spree::Config[:show_price_inc_vat] && 
-      (!Country.current_country.in_vat_zone? || params.key?(:novat))
+    if options.delete(:show_vat_excluded) === true && Spree::Config[:show_price_inc_vat] && !Country.current_country.in_vat_zone?
       amount -= Calculator::Vat.tax_diff_on(product_or_variant)
     end
     
